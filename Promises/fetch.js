@@ -4,7 +4,7 @@ const apiUrl = 'http://worldtimeapi.org/api/timezone/America/New_York'
 async function getData() {
   try {
     const response = await fetch(apiUrl)
-    const data = await response.json() // returns a promise
+    const data = await response.json() // json() it's a function that returns a promise
     console.log(data)
   } catch (error) {
     console.log('Error: ', error)
