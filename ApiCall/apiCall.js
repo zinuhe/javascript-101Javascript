@@ -9,17 +9,17 @@ async function getPokemons() {
   }
 
 (async () => {
-    try {
-        const response = await getPokemons()
-        console.log('Pokemons:', response)
+try {
+  const response = await getPokemons()
+  console.log('Pokemons:', response)
 
-        // Iterate through the response data
-        response.forEach(pokemon => {
-          console.log("Name:", pokemon.name)
-          console.log('URL:', pokemon.url)
-          console.log('')
-        })
-    } catch (error) {
-      console.error('Error: ', error)
-    }
+  // Iterate through the response data
+  response.forEach(pokemon => {
+    console.log('Name:', pokemon.name)
+    console.log('URL:', pokemon.url)
+    console.log('')
+  })
+} catch (error) {
+    console.error('Error: ', error)
+}
 })();
