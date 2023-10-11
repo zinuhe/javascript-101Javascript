@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "start": "node -e 'require(\"./example2\").someFunction()'"
+    }
+}
