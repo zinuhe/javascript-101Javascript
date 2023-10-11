@@ -1,5 +1,5 @@
 ## Run this file using package.json script
 
-```bash
+```shell
 npm run start
 ```

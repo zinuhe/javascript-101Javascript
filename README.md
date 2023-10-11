@@ -1,2 +1,1 @@
-# javascript-101Javascript
-101 Javascript
+# 101 JavaScript

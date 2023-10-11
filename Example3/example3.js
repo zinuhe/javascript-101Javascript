@@ -1,3 +1,3 @@
 module.exports.someFunction = function () {
-    console.log("Hello Example3");
-};
+  console.log('Hello Example3')
+}
