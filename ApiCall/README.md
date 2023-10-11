@@ -3,7 +3,7 @@
 ## Run this file
 
 ```shell
-node apiCall.js
+node simpleApiCall_1.js
 ```
 
 ## Restart the application automatically
@@ -27,5 +27,5 @@ This local installation of `nodemon` can be run by calling it from within `npm` 
 Run the application using the nodemon command followed by the application's file name:
 
 ```shell
-nodemon apiCall.js
+nodemon simpleApiCall_1.js
 ```

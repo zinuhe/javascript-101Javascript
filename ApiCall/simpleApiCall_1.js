@@ -2,9 +2,9 @@ console.log("POKEMON - SIMPLE API CALL");
 
 // Calling an API using Fetch
 async function getPokemons() {
-    const apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=10";
+    const apiUrl = 'https://pokeapi.co/api/v2/pokemon?limit=10';
     const response = await fetch(apiUrl);
-    const result = await response.json(); // Because .json() returns a promise, we can use await to assign the response to a variable.
+    const result = await response.json();  // function .json() returns a promise, we can use await to assign the response to a variable.
     const pokemons = result.results;
 
     // console.log(pokemons);
@@ -28,7 +28,6 @@ async function getPokemons() {
 
 // Approach 2: .then()
 getPokemons()
-    .then(response => {
-        console.log('Pokemons fetched(2):', response);
-    })
-
+  .then(response => {
+    console.log('Pokemons fetched(2):', response);
+  })
