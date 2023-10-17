@@ -24,9 +24,14 @@ npm run dev
 
 ```shell
 npm install standard -D
+# npm install standard --development
+# Install as a Development dependency
 ```
 
-[Documentation](https://eslint.org/docs/latest/use/configure/)
+[standard JS](https://standardjs.com/)
+
+It's necessary to have install `ESLint` extension in Visual Code
+[ESLint Documentation](https://eslint.org/docs/latest/use/configure/)
 
 ### Config
 
@@ -41,5 +46,17 @@ On **`package.json`** add at the end:
     "prefer-promise-reject-errors": "off",
     "space-before-function-paren": ["error", "never"]
   }
+}
+```
+
+On **`settings.json`** :
+
+```javascript
+"[javascript]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
+},
+"editor.codeActionsOnsave": {
+  "source.fixAll.eslint": true
 }
 ```
