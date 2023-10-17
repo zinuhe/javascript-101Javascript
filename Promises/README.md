@@ -39,7 +39,7 @@ On **`package.json`** add at the end:
 
 ```javascript
 "eslintConfig": {
-  "extends":[
+  "extends": [
     "standard"
   ],
   "rules": {
