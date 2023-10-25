@@ -1,0 +1,5 @@
+### Get Pokemon info
+GET http://localhost:1234/pokemon/ditto
+
+### Create a Pokemon
+POST http://localhost:1234/pokemon/ditto

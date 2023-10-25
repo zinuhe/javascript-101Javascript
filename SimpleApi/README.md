@@ -1,12 +1,22 @@
-# API Call
+# Simple API
 
-## Run this file
+## Init
+
+Start a project
 
 ```shell
-node --watch simpleApiCall_1.js
+npm init -y
 ```
 
-## Restart the application automatically
+Will create a package json to install other dependencies
+
+## Run the app
+
+```shell
+node --watch http.js
+```
+
+## Restart the application automatically - second approach
 
 Alternative to the `--watch` option. The node command has to be re-executed in bash whenever there is a change in the application. To restart the application automatically, use the `nodemon` module.
 
@@ -21,14 +31,14 @@ This local installation of `nodemon` can be run by calling it from within `npm` 
 Run the application using the nodemon command followed by the application's file name:
 
 ```shell
-nodemon simpleApiCall_1.js
+nodemon http.js
 ```
 
 The recomended way to do it is using the scripts
 
 ```json
 "scripts": {
-    "dev": "nodemon simpleApiCall_1.js",
+    "dev": "nodemon http.js",
   },
 ```
 
@@ -45,7 +55,7 @@ npm run dev
 ```shell
 npm install standard -D
 # npm install standard --development
-# Install as a Development dependency
+# Install it as a Development dependency
 ```
 
 [standard JS](https://standardjs.com/)
@@ -69,14 +79,12 @@ On **`package.json`** add at the end:
 }
 ```
 
-On **`settings.json`** :
+# Testing
 
-```javascript
-"[javascript]": {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
-},
-"editor.codeActionsOnsave": {
-  "source.fixAll.eslint": true
-}
+Using the extension REST Client
+Add a file api.http (could be any name) and add
+
+```
+### Get Pokemon info
+GET http://localhost:1234/pokemon/ditto
 ```
