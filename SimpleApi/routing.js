@@ -13,8 +13,8 @@ const processRequest = (req, res) => {
           res.setHeader('Content-type', 'application/json; charset=utf-8')
           return res.end(JSON.stringify(dittoJSON))
         default:
-          res.setHeader('Content-type', 'text/html; charset=utf-8')
           res.statusCode = 404
+          res.setHeader('Content-type', 'text/html; charset=utf-8')
           return res.end('<h1>NOT FOUND</h1>')
       }
     case 'POST':
@@ -24,12 +24,14 @@ const processRequest = (req, res) => {
           break
         default:
           res.statusCode = 404
-          return res.end
+          res.setHeader('Content-type', 'text/html; charset=utf-8')
+          return res.end('<h1>NOT FOUND</h1>')
       }
       break
     default:
       res.statusCode = 404
-      return res.end('NOT FOUND')
+      res.setHeader('Content-type', 'text/html; charset=utf-8')
+      return res.end('<h1>NOT FOUND</h1>')
   }
 }
 
