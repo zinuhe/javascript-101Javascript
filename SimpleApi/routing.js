@@ -4,19 +4,18 @@ const http = require('node:http')
 const dittoJSON = require('./pokemon/ditto.json')
 
 const processRequest = (req, res) => {
-  console.log('7')
   const { method, url } = req
   console.log(`method:${method} - url:${url}`)
   switch (method) {
     case 'GET':
       switch (url) {
         case '/pokemon/ditto':
-          console.log('13')
           res.setHeader('Content-type', 'application/json; charset=utf-8')
           return res.end(JSON.stringify(dittoJSON))
         default:
+          res.setHeader('Content-type', 'text/html; charset=utf-8')
           res.statusCode = 404
-          return res.end('NOT FOUND')
+          return res.end('<h1>NOT FOUND</h1>')
       }
     case 'POST':
       switch (url) {
