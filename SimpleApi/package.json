@@ -6,7 +6,8 @@
   "scripts": {
     "dev:1": "nodemon http.js",
     "dev:2": "nodemon routing.js",
-    "dev:3": "node --watch ./express/express.js",
+    "dev:3": "node --watch ./express/1.express.js",
+    "dev:4": "node --watch ./express/2.express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
