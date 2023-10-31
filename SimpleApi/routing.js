@@ -2,6 +2,7 @@ const http = require('node:http')
 
 // get data from a file
 const dittoJSON = require('./pokemon/ditto.json')
+const { type } = require('node:os')
 
 const processRequest = (req, res) => {
   const { method, url } = req
@@ -19,9 +20,23 @@ const processRequest = (req, res) => {
       }
     case 'POST':
       switch (url) {
-        case '/pokemon':
-          // const body = ''
+        case '/pokemon': {
+          let body = ''
+          // Listen data event
+          req.on('data', chunk => {
+            body += chunk.toString()
+          })
+
+          req.on('end', () => {
+            const data = JSON.parse(body)
+            // Call a DB or a service
+            res.writeHead(201, { 'Content-type': 'application/json; charset=utf-8' })
+            data.timestamp = Date.now()
+            res.end(JSON.stringify(data))
+          })
+
           break
+        }
         default:
           res.statusCode = 404
           res.setHeader('Content-type', 'text/html; charset=utf-8')
