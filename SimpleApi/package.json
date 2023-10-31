@@ -6,6 +6,7 @@
   "scripts": {
     "dev:1": "nodemon http.js",
     "dev:2": "nodemon routing.js",
+    "dev:3": "node --watch ./express/express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -20,7 +21,13 @@
     ],
     "rules": {
       "prefer-promise-reject-errors": "off",
-      "space-before-function-paren": ["error", "never"]
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ]
     }
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
