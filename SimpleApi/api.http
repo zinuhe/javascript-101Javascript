@@ -4,6 +4,9 @@ GET http://localhost:1234/
 ### Get Pokemon info
 GET http://localhost:1234/pokemon/ditto
 
+### Get movies
+GET http://localhost:1234/movies
+
 ### Get 404
 GET http://localhost:1234/pokemon
 
