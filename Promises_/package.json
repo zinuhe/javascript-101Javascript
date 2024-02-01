@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx ts-node ./main.ts"
+    "dev:main": "npx ts-node ./main.ts",
+    "dev:main2": "npx ts-node ./main2.ts"
   },
   "keywords": [],
   "author": "JimmySB",
